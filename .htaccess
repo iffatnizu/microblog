@@ -1,0 +1,3 @@
+RewriteEngine on
+RewriteCond $1 !^(index\.php|template|system|assets|application|scripts|index_main.php|robots\.txt)
+RewriteRule ^(.*) index.php/$1 [L]

@@ -1,0 +1,847 @@
+body#microblog {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    background: url(../../images/bg-repeat.jpg) repeat 0 0;
+    color: #333;
+    background-attachment: fixed;
+}
+ul, li {
+    margin: 0px;
+    padding: 0px;
+}
+li {
+    list-style-type: none;
+}
+a {
+    color: #333;
+}
+a:hover {
+    text-decoration: none;
+}
+img {
+    float: left;
+    border: 0px;
+}
+div, h1, h2, h3, h4, h5.h6, small, p, span, input, select, textarea, li {
+    float: left;
+}
+.right {
+    float: right;
+}
+.clearfix {
+    clear: both;
+}
+.wrapper {
+    width: 1000px;
+}
+.transparent {
+    background: rgba(255,255,255,0.8);
+}
+/*=========================================*/
+
+.mainWrapper {
+    float: none;
+    margin: 0 auto;
+    height: auto;
+}
+.microblogContainer {
+    min-height: 500px;
+    margin: 4px 0 0 0;
+    border-radius: 5px;
+}
+.microblogContainer .mbHeader {
+    min-height: 80px;
+    border-radius: 5px;
+    background:#FFF;
+}
+.microblogContainer .mbHeader a img {
+    margin: 10px;
+}
+.microblogContainer .mbSlogan {
+    /*    border-radius: 5px;
+        margin-top: 5px;
+        background:#DFDFDF;*/
+    color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color: #49afcd;
+    background-image: -moz-linear-gradient(top, #5bc0de, #2f96b4);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5bc0de), to(#2f96b4));
+    background-image: -webkit-linear-gradient(top, #5bc0de, #2f96b4);
+    background-image: -o-linear-gradient(top, #5bc0de, #2f96b4);
+    background-image: linear-gradient(to bottom, #5bc0de, #2f96b4);
+    background-repeat: repeat-x;
+    border-color: #2f96b4 #2f96b4 #1f6377;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5bc0de', endColorstr='#ff2f96b4', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    border-radius: 0px;
+    padding: 0px;
+    margin-top: 5px;
+    border-radius: 5px;
+    *background-color: #2f96b4;
+}
+.microblogContainer .mbSlogan p {
+    line-height: 16px;
+    padding: 5px 5px 0 5px;
+    text-align: justify;
+}
+.microblogContainer .mbSlogan p i{
+    font-size: 30px;
+    float: left;
+    margin-right: 2px;
+}
+.microblogContainer .loginArea{
+    width:300px;
+    background:#FFF;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding:10px;
+}
+
+.microblogContainer .registrationArea{
+    width:650px;
+    background:#FFF;
+    border-radius: 5px;
+    padding:10px;
+    margin:5px 0 0 5px;
+}
+.microblogContainer .registrationArea input.signup {
+    background: none repeat scroll 0 0 #F15A29;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.75) inset;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: left;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 8px 25px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.btn-signup {
+    color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color: #faa732;
+    *background-color: #f89406;
+    background-image: -moz-linear-gradient(top, #fbb450, #F15A29);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fbb450), to(#F15A29));
+    background-image: -webkit-linear-gradient(top, #fbb450, #F15A29);
+    background-image: -o-linear-gradient(top, #fbb450, #F15A29);
+    background-image: linear-gradient(to bottom, #fbb450, #F15A29);
+    background-repeat: repeat-x;
+    border-color: #f89406 #f89406 #ad6704;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffbb450', endColorstr='#F15A29', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+.btn-signup:hover,
+.btn-signup:focus,
+.btn-signup:active,
+.btn-signup.active,
+.btn-signup.disabled,
+.btn-signup[disabled] {
+    color: #ffffff;
+    background-color: #F15A29;
+    *background-color: #F15A29;
+}
+
+.btn-warning:active,
+.btn-warning.active {
+    background-color: #F15A29 \9;
+}
+
+.microblogContainer .footer{
+    margin-top:1px;
+    border-radius:5px;
+    margin-top:30px;
+    min-height:50px;
+    padding-bottom:8px;
+    background:#FFF;
+}
+
+.microblogContainer .footer ul li a{
+    float:left;
+    padding:10px 10px;
+    color:#333;
+    font-weight:300;
+}
+.microblogContainer .footer ul li a:hover{
+    color: #F15A29;
+}
+.microblogContainer .footer span.copyright{
+    margin:-10px 10px 0 10px;
+    color:#E96828;
+}
+/*=======================================*/
+.mbUserFeed{
+    /*    background: #FFF;*/
+    margin-top: 10px;
+}
+.mbUserFeed .mbCoverPhoto{
+    width: 998px;
+    height: 315px;
+    background: #d0d0d0;
+    border: 1px solid #BBCCCC;
+}
+.mbUserFeed .mbCoverPhoto form[class=searchForm]{
+    position: absolute;
+    margin: 18px 0 0 690px;
+}
+.mbUserFeed .mbCoverPhoto form[class=searchForm] input[type=text]{
+    margin-right: 2px;
+    height: 17px;
+    font-size: 11px;
+}
+.mbUserFeed .mbCoverPhoto img{
+    width: 998px;
+    height: 315px;
+}
+.mbUserFeed .mbUserPhoto{
+    background: #FFF;
+    border: 1px solid #aba7a5;
+    padding: 5px;
+    border-radius:4px;
+    /*    margin-top: -135px;*/
+    margin-top: -260px;
+    margin-left: 23px;
+}
+.mbUserFeed .mbUserPhoto img{
+    width: 160px;
+    height: 160px;
+}
+.mbUserFeed .displayInfo{
+    color: #333333;
+    font-size: 28px;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 30px;
+    margin: -70px 0 0 24px;
+    min-height: 41px;
+    padding: 4px;
+    text-shadow:0px 1px 0 #FFF,-1px -1px 0 #FFF,1px -1px 0 #FFF,-1px  1px 0 #FFF,1px  1px 0 #FFF;
+}
+.mbUserFeed .mbFeedLeft{
+    width: 733px;
+    margin-top: 10px;
+}
+.mbUserFeed .form{
+    background: #fff;
+    border-radius:4px;
+    margin-bottom: 10px;
+}
+.mbUserFeed .mbFeedLeft a.loading{
+    color: #CCCCCC;
+    margin-left: 70px;
+    padding: 9px;
+    width: 643px;
+    font-weight: bold;
+    background-color: #F8F8F8;
+    border: 1px solid #D8D8D8;
+    border-radius: 3px 3px 3px 3px;
+    float: left;
+    line-height: 29px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.mbUserFeed .mbFeedLeft a.loading i{
+    margin-left: 270px;
+}
+.mbUserFeed .mbFeedLeft form.custom-form div,.mbUserFeed .mbFeedLeft form.custom-form span.ui-btn-inner{
+    float: none;
+    font-size: 16px;
+}
+.mbUserFeed .mbFeedLeft form.custom-form table{
+    width: 500px;
+    margin: 10px 0 0 20px;
+}
+
+.mbUserFeed .mbFeedLeft .mbBtmFix{
+    margin-bottom: 10px;
+}
+.mbUserFeed .mbFeedLeft .propic{
+    width: 56px;
+    background: #FFF;
+    border-radius:4px 0px 0px 4px;
+    border-top: 1px solid #dddddd;
+    border-left: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+    padding: 7px;
+}
+.mbUserFeed .mbFeedLeft .feedarea{
+    width: 641px;
+    border-top: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+    min-height: 277px;
+    border-radius:0px 4px 4px 4px;
+    background: #FFF;
+    padding: 10px;
+}
+.mbUserFeed .mbFeedLeft .feedarea .fTitle{
+    width: 100%;
+}
+.mbUserFeed .mbFeedLeft .feedarea .fTitle h3{
+    width: 100%;
+    font-size: 18px;
+    margin: -6px 0 0 5px;
+}
+.mbUserFeed .mbFeedLeft .feedarea .fTitle span.option{
+    float: right;
+}
+.mbUserFeed .mbFeedLeft .feedarea .fTitle span.option i{
+    color: #ccc;
+}
+.mbUserFeed .mbFeedLeft .feedarea .fTitle span.option ul{
+    border:1px solid #ccc;
+    float: right;
+    font-size: 10px;
+    width: 70px;
+    margin: -2px 0px 0 -53px;
+    background: #FFF;
+    position: absolute;
+    display: none;
+}
+.mbUserFeed .mbFeedLeft .feedarea .fTitle span.option ul li{
+    float: left;
+    border-bottom:1px solid #ddd;
+    width: 70px;
+}
+.mbUserFeed .mbFeedLeft .feedarea .fTitle span.option ul li a{
+    float: left;
+    font-weight: normal;
+    color: #333;
+    width: 65px;
+    padding-left: 5px;
+}
+.mbUserFeed .mbFeedLeft .feedarea .fTitle span.option ul li:hover{
+    background: #ccc;
+}
+.mbUserFeed .mbFeedLeft .feedarea .fTitle h5{
+    margin: 5px 0 0 5px;
+}
+.mbUserFeed .mbFeedLeft .feedarea .fImg{
+    margin-top: 13px;
+}
+.mbUserFeed .mbFeedLeft .feedarea .fImg img{
+    width: 635px;
+    /*    height: 300px;*/
+    margin: 3px 0 3px 3px;
+}
+.mbUserFeed .mbFeedLeft .feedarea .fDescription p{
+    text-align: justify;
+    padding: 10px;
+}
+.mbUserFeed .mbFeedLeft .feedarea .commentArea{
+    border-top:1px solid #dddddd; 
+    margin: 5px;
+    padding-top: 5px;
+    width: 100%;
+}
+.mbUserFeed .mbFeedLeft .feedarea .commentArea a#like{
+    color: #F15A29;
+    font-weight: bold;
+}
+.mbUserFeed .mbFeedLeft .feedarea .commentArea a#like:hover{
+    color: #FBB450;
+}
+.mbUserFeed .mbFeedLeft .feedarea .commentArea a#dislike{
+    float: right;
+    color: #bbb;
+}
+.mbUserFeed .mbFeedLeft .feedarea .commentArea a#dislike:hover{
+    color: #666;
+}
+.mbUserFeed .mbFeedLeft .feedarea .commentArea a.uName{
+    color: #F15A29;
+    font-weight: bold;
+}
+.mbUserFeed .mbFeedLeft .feedarea .commentArea .writeComment .rcImg{
+    width: 25px;
+    height: 25px;
+}
+.mbUserFeed .mbFeedLeft .feedarea .commentArea .writeComment .rcWritePanel{
+    min-height: 30px;
+    border: 1px solid #ccc;
+    width: 594px;
+    padding: 3px;
+    margin-left: 4px;
+}
+.mbUserFeed .mbFeedLeft .feedarea .commentArea .writeComment input[name=comment]
+{
+    float: left;
+    margin-top: 2px;
+    margin-left: 28px;
+}
+.mbUserFeed .mbFeedLeft .feedarea .commentArea .writeComment .showcomment{
+    float: left;
+    margin-bottom: 4px;
+    background: #F7F7F7;
+}
+.mbUserFeed .mbFeedLeft .feedarea .commentArea .writeComment .showcomment .rcWritePanel{
+    margin-bottom: 2px;
+    border: 1px solid #ddd;
+
+}
+.mbUserFeed .mbFeedRight{
+    width: 255px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.mbUserFeed .mbFeedRight .follower{
+    border: 1px solid #d7d8d9;
+    border-radius:4px;
+    width: inherit;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    background: #FFF;
+}
+.mbUserFeed .mbFeedRight .follower ul li{
+    border: 1px solid #D7D8D9;
+    margin: 2px 0 0 8px;
+    width: 241px;
+}
+.mbUserFeed .mbFeedRight .follower ul li a{
+    width: 241px;
+    float: left;
+    line-height: 35px;
+    color: #F15A29;
+    font-weight: bold;
+}
+.mbUserFeed .mbFeedRight .follower ul li a:hover{
+    background: #FAFBFB;
+}
+.mbUserFeed .mbFeedRight .follower ul li a img{
+    height: 35px;
+    width: 35px;
+    margin-right: 5px;
+}
+.mbUserFeed .mbFeedRight .follower ul li.ads img{
+    width: auto;
+    height: auto;
+}
+.mbUserFeed .mbFeedRight .follower ul li a.asu{
+    width: 70px;
+}
+.mbUserFeed .mbFeedRight .follower h3,.mbUserFeed .mbFeedRight .connection h3,.mbUserFeed .mbFeedRight .suggestion h3{
+    font-size: 16px;
+    margin: 3px 0 0 8px;
+    width: 243px;
+    border-bottom: 1px solid #ccc;
+}
+.mbUserFeed .mbFeedRight .connection{
+    border: 1px solid #d7d8d9;
+    border-radius:4px;
+    width: inherit;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    background: #FFF;
+}
+.mbUserFeed .mbFeedRight .connection ul{
+    float: left;
+    margin-left: 8px;
+    margin-top: 2px;
+}
+.mbUserFeed .mbFeedRight .connection ul li{
+    margin-left: 1px;
+    margin-bottom: 1px;
+}
+.mbUserFeed .mbFeedRight .connection ul li a{
+    float: left;
+}
+.mbUserFeed .mbFeedRight .connection ul li a img{
+    width: 60px;
+    height: 60px;
+}
+.mbUserFeed .mbFeedRight .connection ul li a img:hover{
+    opacity:0.6;
+}
+.mbUserFeed .mbFeedRight .suggestion{
+    border: 1px solid #d7d8d9;
+    border-radius:4px;
+    width: inherit;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    background: #FFF;
+}
+.mbUserFeed .mbFeedRight .suggestion ul{
+    float: left;
+    margin-left: 8px;
+    margin-top: 2px;
+}
+.mbUserFeed .mbFeedRight .suggestion ul li{
+    margin-left: 1px;
+    margin-bottom: 1px;
+    width: 236px;
+    border:1px solid #ccc;
+    padding: 2px;
+}
+.mbUserFeed .mbFeedRight .suggestion ul li a{
+    float: left;
+    text-align: center;
+    font-size: 11px;
+}
+.mbUserFeed .mbFeedRight .suggestion ul li span img{
+    width: 60px;
+    height: 60px;
+    margin-right: 5px;
+}
+.mbUserFeed .mbFeedRight .suggestion ul li a.asu{
+    margin-right: 5px;
+}
+
+.mbUserFeed .mbFeedRight .suggestion ul li a img:hover{
+    opacity:0.6;
+}
+.mbUserFeed .userMenu{
+    float: right;
+    margin-top: -63px;
+    margin-right: 5px;
+}
+.mbUserFeed .userMenu ul li a{
+    font-size: 12px;
+    color: #333333;
+    float: left;
+    padding: 3px 7px;
+    text-shadow:0px 1px 0 #FFF,-1px -1px 0 #FFF,1px -1px 0 #FFF,-1px  1px 0 #FFF,1px  1px 0 #FFF;
+    margin-right: 2px;
+}
+.mbUserFeed .userMenu ul li a.logout{
+    color: #FFF;
+    text-shadow:0px 1px 0 #CB423B,-1px -1px 0 #CB423B,1px -1px 0 #CB423B,-1px  1px 0 #CB423B,1px  1px 0 #CB423B;
+}
+.mbUserFeed .userMenu ul li a:hover{
+    color: #F15A29;
+}
+.mbUserFeed .userMenu ul li a.logout:hover{
+    color: #FFF;
+}
+.mbUserFeed .userMenu ul.dropdown-menu{
+    width: 160px;
+}
+.mbUserFeed .userMenu ul.dropdown-menu li a{
+    background: none;
+}
+.mbUserFeed .userMenu ul.dropdown-menu li a:hover{
+    color: #F15A29;
+}
+.mbUserFeed .mbFeedLeft .statusUpdate{
+    background: #FFF;
+    width: 712px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.mbUserFeed .mbFeedLeft .statusUpdate .status{
+
+    width: 706px;
+    border:1px solid #EEE;
+    min-height: 60px;
+    padding: 2px;
+
+}
+.mbUserFeed .mbFeedLeft .statusUpdate p{
+    width: 706px;
+    font-weight: bold;
+    color: #F15A29;
+    margin-bottom: 0px;
+}
+.mbUserFeed .mbFeedLeft .statusUpdate span.arrow{
+    border-color: transparent transparent #B4BBCD  transparent ;
+    border-style: inset;
+    border-width: 8px;
+    display: inline-block;
+    height: 0;
+    margin: 0px 0px;
+    opacity: 1;
+    position: relative;
+    float: left;
+}
+.mbUserFeed .mbFeedLeft .statusUpdate .doMore{
+    display: none;
+    background: #F6F7F8;
+    width: 710px;
+    min-height: 30px;
+    border-right:1px solid #EEE;
+    border-left:1px solid #EEE;
+    border-bottom:1px solid #EEE;
+}
+.mbUserFeed .mbFeedLeft .statusUpdate .doMore input[type=file]{
+    margin: 5px;
+}
+.mbUserFeed .mbFeedLeft .statusUpdate .doMore input[type=button]{
+    float: right;
+    margin: 5px;
+}
+
+.mbUserFeed .mbFeedLeft .connectionList{
+    background: #FFF;
+    width: 712px;
+    padding: 0 10px 10px 10px;
+    margin-bottom: 10px;
+}
+.mbUserFeed .mbFeedLeft .connectionList ul{
+
+}
+.mbUserFeed .mbFeedLeft .connectionList ul li{
+    width: 140px;
+    min-height: 125px;
+    border: 1px solid #ccc;
+    border-radius:5px;
+    padding: 3px;
+    margin-right: 2px;
+    margin-bottom:2px;
+}
+.mbUserFeed .mbFeedLeft .connectionList ul li:hover{
+    border: 1px solid #aaa;
+}
+.mbUserFeed .mbFeedLeft .connectionList ul li a{
+    color: #F15A29;
+}
+.mbUserFeed .mbFeedLeft .connectionList ul li a:hover{
+    color: #49afcd;
+}
+.mbUserFeed .mbFeedLeft .connectionList ul li a img{
+    width: 140px;
+    height: 140px;
+}
+.mbUserFeed .mbFeedLeft .connectionList ul li a span{
+    float: left;
+    width: 140px;
+    text-align: center;
+}
+.mbUserFeed .mbFeedLeft .privateChat{
+    margin: 10px;
+}
+.mbUserFeed .mbFeedLeft .privateChat .msgTitleBox{
+    float: left;
+    width: 192px;
+    height: 500px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+.mbUserFeed .mbFeedLeft .privateChat .msgTitleBox ul{
+    margin: 0px;
+    padding: 0px;
+}
+.mbUserFeed .mbFeedLeft .privateChat .msgTitleBox ul li{
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    background: #F7F7F7;
+    border-bottom: 1px solid #ddd;
+    width: 192px;
+    overflow: hidden;
+}
+.mbUserFeed .mbFeedLeft .privateChat .msgTitleBox ul li i{
+    float: left;
+    font-size: 30px;
+    color: #000;
+    margin-top: 4px;
+}
+
+.mbUserFeed .mbFeedLeft .privateChat .msgTitleBox ul li a{
+    float: left;
+    width: 186px;
+    padding: 3px;
+}
+.mbUserFeed .mbFeedLeft .privateChat .msgTitleBox ul li a:hover{
+    text-decoration: none;
+}
+.mbUserFeed .mbFeedLeft .privateChat .msgTitleBox ul li:hover{
+    background: #DBEAF9;
+}
+.mbUserFeed .mbFeedLeft .privateChat .msgTitleBox ul li a h6,p,small{
+    margin: 0px;
+    padding: 0px;
+}
+.mbUserFeed .mbFeedLeft .privateChat .msgTitleBox ul li a h6{
+    color: #F47233;
+    float: left;
+    margin-left: 2px;
+}
+.mbUserFeed .mbFeedLeft .privateChat .msgTitleBox ul li a p{
+    /*    color: #49AFCD;*/
+    margin-left: 2px;
+}
+.mbUserFeed .mbFeedLeft .privateChat .msgTitleBox ul li a p small{
+    float: left;
+    line-height: normal;
+    margin-top: 0px;
+    text-align: left;
+    width: 150px;
+}
+.mbUserFeed .mbFeedLeft .privateChat .msgTitleBox ul li a p small span{
+}
+
+.mbUserFeed .mbFeedLeft .privateChat .msgDeatilsBox{
+    float: left;
+    width: 500px;
+    min-height: 500px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+.mbUserFeed .mbFeedLeft .privateChat .msgDeatilsBox #reportArea{
+    width: 500px;
+}
+.mbUserFeed .mbFeedLeft .privateChat .msgDeatilsBox #reportArea a{
+    float: right;
+    color: #E34B39;
+    font-size: 12px;
+    margin: 10px 10px 0 0px;
+    text-align: center;
+    border: 1px solid #EEEEEE;
+    padding: 3px;
+    border-radius:5px;
+    line-height: normal;
+}
+.mbUserFeed .mbFeedLeft .privateChat .msgDeatilsBox #reportArea a:hover{
+    text-decoration: none;
+    border: 1px solid #4FBBEE;
+}
+.mbUserFeed .mbFeedLeft .privateChat .msgDeatilsBox ul{
+    margin: -10px 0 0 0;
+    padding: 0px;
+    width: 500px;
+}
+.mbUserFeed .mbFeedLeft .privateChat .msgDeatilsBox ul li{
+    float: left;
+    margin: 3px;
+    padding: 7px;
+    list-style-type: none;
+    border: 1px solid #eee;
+    border-radius:5px;
+    max-width: 550px;
+}
+
+.mbUserFeed .mbFeedLeft .privateChat .msgDeatilsBox ul li h6{
+    margin: 0px;
+    padding: 0px;
+}
+.mbUserFeed .mbFeedLeft .privateChat .msgDeatilsBox ul li.displayleft{
+    text-align: left;
+}
+.mbUserFeed .mbFeedLeft .privateChat .msgDeatilsBox ul li.displayright{
+    text-align: right;
+    float: right;
+}
+.mbUserFeed .mbFeedLeft .privateChat .msgDeatilsBox ul li.displayleft h6{
+    color: green;
+}
+.mbUserFeed .mbFeedLeft .privateChat .msgDeatilsBox ul li.displayright h6{
+    color: #DD4B39;
+}
+.mbUserFeed .mbFeedLeft .privateChat .msgDeatilsBox .sendarea{
+    margin:10px;
+    float: left;
+    display: none;
+}
+.mbUserFeed .mbFeedLeft .privateChat .msgDeatilsBox .sendarea #pageContent{
+    float: left;
+    border: 1px solid #ccc;
+    margin-top: 2px;
+    border-radius:4px;
+    font-size: 13px;
+    line-height: normal;
+    overflow: auto;   
+    width: 470px;
+    height:90px;
+    margin-bottom:10px;
+    padding: 4px;
+}
+.mbUserFeed .mbFeedLeft .privateChat .msgDeatilsBox .sendarea #pageContent img{
+    float: none;
+}
+.mbUserFeed .mbFeedLeft .privateChat .msgDeatilsBox ul#formateText li{
+    border: none;
+    padding: 0px;
+    margin: 0px;
+}
+.mbUserFeed .mbFeedLeft  .privateChat ul#imoticons{
+    display: none;
+}
+.mbUserFeed .mbFeedLeft  .privateChat ul#imoticons li.imo{
+    height: 15px;
+}
+.mbUserFeed .mbFeedLeft  .privateChat img#openImo{
+    margin: 5px 0 0 10px;
+    cursor: pointer;
+}
+.userFooter{
+    margin-top:1px;
+    border-radius:5px;
+    min-height:50px;
+    padding-bottom:8px;
+    background:#FFF;
+    width: 733px;
+}
+
+.userFooter ul li a{
+    float:left;
+    padding:10px 10px;
+    color:#333;
+    font-weight:300;
+}
+.userFooter ul li a:hover{
+    color: #F15A29;
+}
+.userFooter span.copyright{
+    margin:-10px 10px 0 10px;
+    color:#E96828;
+}
+#lightBox{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    float: none;
+    display: none;
+}
+#lightBox .lightBoxContainer{
+    margin: 0 auto;
+    float: none;
+    width: 600px;
+}
+#lightBox .lightBoxContainer .lightBoxContent{
+    min-height: 400px;
+    background: #FFF;
+    float: none;
+    border-radius:4px;
+    margin-top: 100px;
+    border:1px solid #F1E085;
+}
+#lightBox .lightBoxContainer .lightBoxContent .lightBoxTop{
+    background: #F1E085;
+    height: 35px;
+    width: 598px;
+    line-height: 35px;
+}
+#lightBox .lightBoxContainer .lightBoxContent .lightBoxTop .lbtTitle{
+    margin-left: 5px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+#lightBox .lightBoxContainer .lightBoxContent .lightBoxTop .lbtStatus{
+    color: red;
+    font-weight: bold;
+}
+#lightBox .lightBoxContainer .lightBoxContent .lightBoxTop .lbtClose{
+    float: right;
+    margin-right: 6px;
+    margin-top: 9px;
+}
+#lightBox .lightBoxContainer .lightBoxContent .lightBoxTop .lbtClose a{
+    color: red;
+    font-weight: bold;
+    font-size: 15px;
+}
+#lightBox .lightBoxContainer .lightBoxContent .lbtBody{
+    padding: 10px;
+    width: 578px;
+}
